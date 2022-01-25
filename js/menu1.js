@@ -6,4 +6,24 @@ let menuHtml =`
 `;
 // 取得 DOM 的節點
 let menu = document.getElementById('menu');
-menu.textContent = menu
+// menu.textContent = menuHtml;//寫入節點 文字內容
+//menu.innerHTML = menuHtml;//將 HTML 寫入節點
+
+let menuData = [
+    {
+        title:'Home',
+        url:'index.html'
+    },
+    {
+        title:'About',
+        url:'About.html'
+    },
+    {
+        title:'Products',
+        url:'Products.html'
+    },
+    {
+        title:'store',
+        url:'store.html'
+    },
+];
