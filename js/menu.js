@@ -22,7 +22,7 @@ let menu = document.getElementById('menu');
 
 let menuData = [
     {
-        title: '首頁1',
+        title: '首頁',
         url: 'index.html'
     },
     {
