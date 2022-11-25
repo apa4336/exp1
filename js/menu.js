@@ -1,21 +1,24 @@
-let menuHtml = `
-<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li>
-<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
-`;
+// let menuHtml = ` //第一種方式，重音節可以不用換行
+// <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+// <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
+// <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li>
+// <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
+// `;
 
-let m = '';
-m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>';
-m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>';
-m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li>';
-m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>';
+// let m = '';   //另一種方式
+// m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>';
+// m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>';
+// m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li>';
+// m += '<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>';
 
 
 // 取得 DOM 的節點
-let menu = document.getElementById('menu');
-// menu.textContent = menuHtml;//寫入節點 文字內容
-// menu.innerHTML = m;//將 HTML 寫入節點
+// let menu = document.getElementById('menu');
+// menu.textContent = menuHtml;//寫入節點 >>>>文字內容   (故意做錯的)
+/*網頁顯示
+<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li> <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li> <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li> <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
+*/
+// menu.innerHTML = m;  //將 HTML 寫入節點
 
 // let menuData = ['Home', 'About', 'Products', 'Store'];
 // let menuDataUrl = ['index.html', 'about.html"', 'products.htmls', 'store.html']
@@ -39,7 +42,10 @@ let menuData = [
     }
 ];
 // let x = 'title';
-// console.log(menuData[0]['url']);
+// console.log(menuData[0]['url']); // index.html
+// console.log(menuData[0].title);  //  Home   11/25
+// console.log(menuData[0]['title']); //  Home 11/25
+
 
 /**
  menuHtml = menuHtml + `<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>`;
@@ -56,5 +62,10 @@ for(let row of menuData){
     // menuHtml += `<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="${row.url}">${row.title}</a></li>\n`;
 
     // console.log(menuHtml);
+    // console.log(title);
+    // console.log(url);
 }
-menu.innerHTML = menuHtml;//將 HTML 寫入節點
+let menu = document.getElementById('menu');
+menu.innerHTML = menuHtml;  //將 HTML 寫入節點
+
+// console.log(menuHtml);
